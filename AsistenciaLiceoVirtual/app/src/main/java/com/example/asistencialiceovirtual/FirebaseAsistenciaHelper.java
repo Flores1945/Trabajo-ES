@@ -18,6 +18,9 @@ import java.util.Map;
 /**
  * Registra asistencia en el nodo {@code asistencias} de Firebase RTDB,
  * con la misma estructura que usa la web ({@code js/asistencias.js}).
+ *
+ * Usa una clave determinista ({@code estudianteId_fecha}) para que al cambiar
+ * el estado del mismo alumno en el mismo dia se sobrescriba el registro anterior.
  */
 public final class FirebaseAsistenciaHelper {
 
@@ -32,7 +35,7 @@ public final class FirebaseAsistenciaHelper {
     }
 
     /**
-     * Registra la asistencia de un estudiante.
+     * Registra (o sobrescribe) la asistencia de un estudiante para el dia actual.
      *
      * @param context       contexto Android
      * @param estudiante    datos del alumno
@@ -57,10 +60,13 @@ public final class FirebaseAsistenciaHelper {
             return;
         }
 
+        String fechaHoy = new SimpleDateFormat("yyyy-MM-dd", Locale.ROOT).format(new Date());
+        String claveAsistencia = estudiante.getId() + "_" + fechaHoy;
+
         DatabaseReference ref = FirebaseDatabase.getInstance(FirebaseLoginHelper.DATABASE_URL)
                 .getReference()
                 .child(NODE_ASISTENCIAS)
-                .push();
+                .child(claveAsistencia);
 
         String fechaHora = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.ROOT)
                 .format(new Date());

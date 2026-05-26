@@ -35,4 +35,14 @@
     <color name="ripple_on_primary">#33FFFFFF</color>
     <color name="ripple_on_surface">#1A0B4C82</color>
     <color name="overlay_header">#1A000000</color>
+
+    <!-- Asistencia -->
+    <color name="asistencia_puntual">#2E7D32</color>
+    <color name="asistencia_tardanza">#E65100</color>
+    <color name="asistencia_falta">#C62828</color>
+    <color name="asistencia_justificacion">#1565C0</color>
+    <color name="asistencia_puntual_light">#E8F5E9</color>
+    <color name="asistencia_tardanza_light">#FFF3E0</color>
+    <color name="asistencia_falta_light">#FFEBEE</color>
+    <color name="asistencia_justificacion_light">#E3F2FD</color>
 </resources>

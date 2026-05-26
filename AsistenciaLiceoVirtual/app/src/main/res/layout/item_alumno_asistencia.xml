@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.App.Card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/spacing_screen"
+    android:layout_marginVertical="@dimen/spacing_xs">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_md">
+
+        <!-- Fila superior: avatar + nombre -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgAvatarAlumno"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:contentDescription="@string/desc_foto_perfil"
+                android:src="@drawable/avatar_alumno_a" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_md"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtNombreAlumno"
+                    style="@style/TextAppearance.App.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    tools:text="Camila Quispe Rojas" />
+
+                <TextView
+                    android:id="@+id/txtDetalleAlumno"
+                    style="@style/TextAppearance.App.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    tools:text="3° · Sección B" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Estado actual de asistencia -->
+        <TextView
+            android:id="@+id/txtEstadoAsistencia"
+            style="@style/TextAppearance.App.Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:visibility="gone"
+            tools:text="Puntual"
+            tools:visibility="visible" />
+
+        <!-- Fila de botones de asistencia -->
+        <LinearLayout
+            android:id="@+id/layoutBotonesAsistencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_sm"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPuntual"
+                style="@style/Widget.App.Button.Asistencia"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/asistencia_puntual"
+                android:text="@string/btn_puntual"
+                android:textSize="11sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTardanza"
+                style="@style/Widget.App.Button.Asistencia"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/asistencia_tardanza"
+                android:text="@string/btn_tardanza"
+                android:textSize="11sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFalta"
+                style="@style/Widget.App.Button.Asistencia"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/asistencia_falta"
+                android:text="@string/btn_falta"
+                android:textSize="11sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnJustificacion"
+                style="@style/Widget.App.Button.Asistencia"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/asistencia_justificacion"
+                android:text="@string/btn_justificacion"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

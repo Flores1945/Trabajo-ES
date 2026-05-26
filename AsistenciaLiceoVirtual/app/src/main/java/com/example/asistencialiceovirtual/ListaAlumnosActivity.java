@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,11 +23,13 @@ public class ListaAlumnosActivity extends AppCompatActivity {
     public static final String EXTRA_NIVEL = "extra_nivel_firebase";
     public static final String EXTRA_GRADO = "extra_grado";
     public static final String EXTRA_SECCION = "extra_seccion";
+    public static final String EXTRA_DOCENTE_NOMBRE = "extra_docente_nombre";
 
     private ProgressBar progressBar;
     private TextView txtEstado;
     private RecyclerView recyclerView;
     private AlumnosAdapter adapter;
+    private String nombreDocente;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,10 +51,15 @@ public class ListaAlumnosActivity extends AppCompatActivity {
         String nivel = getIntent().getStringExtra(EXTRA_NIVEL);
         String grado = getIntent().getStringExtra(EXTRA_GRADO);
         String seccion = getIntent().getStringExtra(EXTRA_SECCION);
+        nombreDocente = getIntent().getStringExtra(EXTRA_DOCENTE_NOMBRE);
 
         if (turno == null || nivel == null || grado == null || seccion == null) {
             finish();
             return;
+        }
+
+        if (nombreDocente == null || nombreDocente.trim().isEmpty()) {
+            nombreDocente = "Docente APK";
         }
 
         TextView txtToolbarTitle = findViewById(R.id.txtToolbarTitle);
@@ -69,10 +77,40 @@ public class ListaAlumnosActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerAlumnos);
 
         adapter = new AlumnosAdapter();
+        adapter.setOnAsistenciaClickListener(this::registrarAsistencia);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
         cargarAlumnos(turno, nivel, grado, seccion);
+    }
+
+    private void registrarAsistencia(Estudiante estudiante, String estado) {
+        FirebaseAsistenciaHelper.registrarAsistencia(
+                this,
+                estudiante,
+                estado,
+                nombreDocente,
+                new FirebaseAsistenciaHelper.AsistenciaListener() {
+                    @Override
+                    public void onSuccess() {
+                        adapter.marcarEstado(estudiante.getId(), estado);
+                        Toast.makeText(
+                                ListaAlumnosActivity.this,
+                                getString(R.string.asistencia_registrada,
+                                        estudiante.getNombresCompletos(), estado),
+                                Toast.LENGTH_SHORT
+                        ).show();
+                    }
+
+                    @Override
+                    public void onFailure(String message) {
+                        Toast.makeText(
+                                ListaAlumnosActivity.this,
+                                message,
+                                Toast.LENGTH_LONG
+                        ).show();
+                    }
+                });
     }
 
     private void cargarAlumnos(String turno, String nivel, String grado, String seccion) {

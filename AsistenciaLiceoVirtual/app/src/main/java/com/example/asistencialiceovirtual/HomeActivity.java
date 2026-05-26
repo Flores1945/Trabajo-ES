@@ -22,6 +22,8 @@ public class HomeActivity extends AppCompatActivity {
     /** URL de foto opcional (desde Firebase {@code fotoUrl} o {@code foto}). */
     public static final String EXTRA_PHOTO_URL = "extra_photo_url";
 
+    private String fullName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +36,7 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         Intent intent = getIntent();
-        String fullName = intent.getStringExtra(EXTRA_FULL_NAME);
+        fullName = intent.getStringExtra(EXTRA_FULL_NAME);
         String cargo = intent.getStringExtra(EXTRA_CARGO);
         String photoUrl = intent.getStringExtra(EXTRA_PHOTO_URL);
 
@@ -72,6 +74,7 @@ public class HomeActivity extends AppCompatActivity {
     private void abrirNivel(String turno) {
         Intent intent = new Intent(this, NivelEscolarActivity.class);
         intent.putExtra(NivelEscolarActivity.EXTRA_TURNO, turno);
+        intent.putExtra(NivelEscolarActivity.EXTRA_DOCENTE_NOMBRE, fullName);
         startActivity(intent);
     }
 

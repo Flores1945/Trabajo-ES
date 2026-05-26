@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.AsistenciaLiceoVirtual" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_light</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorBackground">#121820</item>
+        <item name="colorSurface">#1E2832</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+</resources>

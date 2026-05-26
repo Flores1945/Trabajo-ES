@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistencias - Liceo Asistencia</title>
+    <link rel="stylesheet" href="../css/tema.css">
+    <link rel="stylesheet" href="../css/asistencias.css">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body class="pagina-asistencias">
+    <header class="cabecera">
+        <div>
+            <p class="brand-bar">I.E. Liceo Trujillo</p>
+            <h1>Registro de Asistencias</h1>
+        </div>
+        <div class="acciones-cabecera">
+            <nav id="menuNavegacion" class="menu-top-asistencias"></nav>
+            <button type="button" class="btn-funcional-inline" id="cerrarSesionBtn">Cerrar sesion</button>
+        </div>
+    </header>
+
+    <section class="panel-filtros">
+        <header class="panel-filtros-encabezado">
+            <h2>Busqueda y filtros</h2>
+            <p>Selecciona criterios para consultar los registros de asistencia.</p>
+        </header>
+
+        <div class="filtros-bloque bloque-busqueda">
+            <h3>Estudiante</h3>
+            <div class="campo-inline">
+                <label for="buscarEstudiante">Buscar por nombre</label>
+                <input type="text" id="buscarEstudiante" placeholder="Escribe el nombre del estudiante...">
+            </div>
+        </div>
+
+        <div class="filtros-bloque bloque-aula">
+            <h3>Aula y turno</h3>
+            <div class="filtros-fila tres-columnas">
+                <div class="campo-inline">
+                    <label for="filtroGrado">Grado</label>
+                    <select id="filtroGrado">
+                        <option value="">Todos</option>
+                    </select>
+                </div>
+                <div class="campo-inline">
+                    <label for="filtroSeccion">Seccion</label>
+                    <select id="filtroSeccion">
+                        <option value="">Todas</option>
+                    </select>
+                </div>
+                <div class="campo-inline">
+                    <label for="filtroTurno">Turno</label>
+                    <select id="filtroTurno">
+                        <option value="">Todos</option>
+                        <option value="Dia">Dia</option>
+                        <option value="Tarde">Tarde</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="filtros-bloque bloque-fechas">
+            <h3>Periodo</h3>
+            <div class="filtros-fila dos-columnas">
+                <div class="campo-inline">
+                    <label for="filtroFechaDesde">Fecha desde</label>
+                    <input type="date" id="filtroFechaDesde">
+                </div>
+                <div class="campo-inline">
+                    <label for="filtroFechaHasta">Fecha hasta</label>
+                    <input type="date" id="filtroFechaHasta">
+                </div>
+            </div>
+        </div>
+
+        <div class="filtros-bloque bloque-acciones" id="bloqueExportacion">
+            <h3>Exportar y datos de prueba</h3>
+            <div class="grupo-botones">
+                <button type="button" class="btn-funcional-inline" id="exportarSeleccionBtn">Exportar aula seleccionada</button>
+                <button type="button" class="btn-funcional-inline" id="exportarTodoBtn">Exportar todas las aulas</button>
+                <button type="button" class="btn-funcional-inline" id="cargarDemoBtn">Cargar 60 estudiantes demo</button>
+                <button type="button" class="btn-funcional-inline" id="limpiarDemoBtn">Limpiar demo</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="estado-wrap">
+        <p id="estadoAsistencia"></p>
+        <p id="resumenFiltrado"></p>
+    </section>
+
+    <section class="indicadores-wrap">
+        <h2>Indicador por aula</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Aula</th>
+                    <th>Asistencias</th>
+                    <th>Tardanzas</th>
+                    <th>Inasistencias</th>
+                </tr>
+            </thead>
+            <tbody id="tablaIndicadoresBody"></tbody>
+        </table>
+    </section>
+
+    <section class="tabla-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Estudiante</th>
+                    <th>Grado</th>
+                    <th>Seccion</th>
+                    <th>Turno</th>
+                    <th>Estado</th>
+                    <th>Tomado por</th>
+                    <th>Fecha y hora</th>
+                </tr>
+            </thead>
+            <tbody id="tablaAsistenciasBody"></tbody>
+        </table>
+    </section>
+
+    <script type="module" src="../js/asistencias.js"></script>
+</body>
+</html>

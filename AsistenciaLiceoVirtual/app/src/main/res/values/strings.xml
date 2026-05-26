@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">AsistenciaLiceo Virtual</string>
+    <string name="home_header_title">Panel de asistencia</string>
+    <string name="home_header_subtitle">Liceo — registro virtual de asistencia</string>
+    <string name="label_bienvenida">Bienvenido/a</string>
+    <string name="home_rol_hint">Docente</string>
+    <string name="home_elegir_turno">Selecciona tu turno</string>
+    <string name="btn_turno_manana">Turno día</string>
+    <string name="btn_turno_tarde">Turno tarde</string>
+    <string name="btn_cerrar_sesion">Cerrar sesión</string>
+    <string name="desc_foto_perfil">Foto del estudiante</string>
+    <string name="usuario">Usuario</string>
+    <string name="login_error">No se pudo iniciar sesion. Revisa los pasos indicados abajo.</string>
+    <string name="login_error_indice">DNI no encontrado. Registre al docente en la web y verifique indice_login_apk en Firebase.</string>
+    <string name="login_error_clave">Contrasena incorrecta. Use la misma clave del registro web.</string>
+    <string name="login_error_usuario_auth">Correo no registrado en Firebase Authentication.</string>
+    <string name="login_error_config_apk">Configuracion APK incorrecta: descargue google-services.json real desde Firebase Console.</string>
+    <string name="login_error_reglas">Sin permiso para leer indice_login_apk. Publique las reglas de Firebase.</string>
+    <string name="login_error_dni_formato">El DNI debe tener 8 digitos</string>
+    <string name="login_error_perfil">Perfil incompleto en indice_login_apk (falta correo, cargo o nombre).</string>
+    <string name="login_error_solo_docentes">Solo Docente y Sub Docente pueden usar la app movil</string>
+    <string name="login_campos_vacios">Ingresa DNI y contraseña</string>
+    <string name="login_ayuda_firebase">Los accesos los carga un administrador en Firebase. Si no puedes entrar, revisa DNI y clave en la base de datos.</string>
+    <string name="login_error_db">No se pudo conectar con la base de datos: %1$s</string>
+    <string name="login_ayuda_toca">¿No tienes cuenta? Crear acceso</string>
+    <string name="login_brand_title">Asistencia Digital</string>
+    <string name="login_brand_subtitle">Liceo Virtual · Control de asistencia</string>
+    <string name="login_card_title">Iniciar sesión</string>
+    <string name="login_card_subtitle">Ingresa tu DNI y contraseña autorizados</string>
+    <string name="login_hint_dni">DNI autorizado</string>
+    <string name="login_hint_password">Contraseña</string>
+    <string name="login_btn_iniciar">Ingresar</string>
+    <string name="desc_logo_liceo">Logo del liceo</string>
+    <string name="registro_title">Crear cuenta</string>
+    <string name="registro_subtitle">Completa los datos. Se guardarán en la base de datos del liceo.</string>
+    <string name="registro_label_nombre">Nombres y apellidos completos *</string>
+    <string name="registro_hint_nombre">Ej.: Ana María López García</string>
+    <string name="registro_label_dni">DNI *</string>
+    <string name="registro_hint_dni">Hasta 8 dígitos, solo números</string>
+    <string name="registro_label_clave">Contraseña *</string>
+    <string name="registro_hint_clave">Tu clave para iniciar sesión</string>
+    <string name="registro_nota_clave">Usarás esta contraseña junto con tu DNI en la pantalla de inicio de sesión.</string>
+    <string name="btn_registrar">Guardar registro</string>
+    <string name="registro_exito">Registro guardado. Ya puedes iniciar sesión.</string>
+    <string name="registro_error_guardar">No se pudo guardar: %1$s</string>
+    <string name="registro_error_nombre_vacio">Ingresa nombres y apellidos.</string>
+    <string name="registro_error_nombre_numeros">El nombre no puede incluir números.</string>
+    <string name="registro_error_dni_vacio">Ingresa tu DNI.</string>
+    <string name="registro_error_dni_largo">El DNI admite como máximo 8 dígitos.</string>
+    <string name="registro_error_dni_solo_numeros">El DNI solo puede contener números.</string>
+    <string name="registro_error_clave_vacia">Ingresa una contraseña.</string>
+    <string name="nivel_title">Nivel educativo</string>
+    <string name="nivel_subtitle">Elige si tu curso es de primaria o secundaria</string>
+    <string name="nivel_subtitle_expand">Toca Primaria o Secundaria para elegir grado y sección. Vuelve a tocar para cerrar.</string>
+    <string name="btn_primaria">Primaria</string>
+    <string name="btn_secundaria">Secundaria</string>
+    <string name="turno_actual">Turno: %1$s</string>
+    <string name="turno_manana_corto">Día</string>
+    <string name="turno_tarde_corto">Tarde</string>
+    <string name="desc_volver">Volver atrás</string>
+    <string name="grado_seccion_title">Grado y sección</string>
+    <string name="label_grado">Grado</string>
+    <string name="label_seccion">Sección</string>
+    <string name="btn_confirmar_grado_seccion">Confirmar</string>
+    <string name="nivel_turno_linea">%1$s · Turno %2$s</string>
+    <string name="msg_resumen_seleccion">%1$s · %2$s — Grado %3$s · Sección %4$s</string>
+
+    <string name="alumnos_title">Alumnos del aula</string>
+    <string name="alumnos_resumen_aula">%1$s · %2$s · Sección %3$s · Turno %4$s</string>
+    <string name="alumnos_item_detalle">%1$s · Sección %2$s</string>
+    <string name="alumnos_vacio">No hay alumnos registrados en esta aula. Regístrelos en la web (Alumnos).</string>
+    <string name="alumnos_error_sesion">Sesión expirada. Vuelva a iniciar sesión.</string>
+    <string name="alumnos_error_reglas">Sin permiso para leer estudiantes. Publique las reglas de Firebase.</string>
+    <string name="alumnos_error_db">No se pudo cargar alumnos: %1$s</string>
+
+    <string-array name="grados_primaria">
+        <item>1°</item>
+        <item>2°</item>
+        <item>3°</item>
+        <item>4°</item>
+        <item>5°</item>
+        <item>6°</item>
+    </string-array>
+    <string-array name="grados_secundaria">
+        <item>1°</item>
+        <item>2°</item>
+        <item>3°</item>
+        <item>4°</item>
+        <item>5°</item>
+    </string-array>
+    <string-array name="secciones_a_o">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+    </string-array>
+</resources>

@@ -1,0 +1,267 @@
+.layout-reportes .contenido-reportes {
+    max-width: 100%;
+}
+
+.vista-auditoria.oculto,
+.vista-portal.oculto {
+    display: none;
+}
+
+.auditoria-cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 20px 0 12px;
+}
+
+.leyenda-cargos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    padding: 10px 14px;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    font-size: 0.82rem;
+}
+
+.leyenda-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--texto-suave);
+}
+
+.leyenda-punto {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.filtros-auditoria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.filtros-auditoria label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.78rem;
+    color: var(--texto-suave);
+}
+
+.filtros-auditoria select,
+.filtros-auditoria input {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--borde);
+    background: var(--superficie);
+    color: var(--texto);
+    min-width: 140px;
+}
+
+.estado-auditoria {
+    font-size: 0.88rem;
+    color: var(--texto-suave);
+    margin-bottom: 12px;
+}
+
+.tabla-auditoria-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    background: var(--superficie);
+}
+
+.tabla-auditoria {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.86rem;
+}
+
+.tabla-auditoria th,
+.tabla-auditoria td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--borde);
+}
+
+.tabla-auditoria th {
+    color: var(--texto-suave);
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.fila-movimiento {
+    border-left: 4px solid transparent;
+}
+
+.fila-movimiento.cargo-director { border-left-color: #f59e0b; }
+.fila-movimiento.cargo-subdirector { border-left-color: #3b82f6; }
+.fila-movimiento.cargo-apafa { border-left-color: #22c55e; }
+.fila-movimiento.cargo-docente { border-left-color: #a855f7; }
+.fila-movimiento.cargo-sub-docente { border-left-color: #06b6d4; }
+
+.etiqueta-cargo {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.etiqueta-cargo.cargo-director {
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+}
+
+.etiqueta-cargo.cargo-subdirector {
+    background: rgba(59, 130, 246, 0.2);
+    color: #93c5fd;
+}
+
+.etiqueta-cargo.cargo-apafa {
+    background: rgba(34, 197, 94, 0.2);
+    color: #86efac;
+}
+
+.etiqueta-cargo.cargo-docente {
+    background: rgba(168, 85, 247, 0.2);
+    color: #d8b4fe;
+}
+
+.etiqueta-cargo.cargo-sub-docente {
+    background: rgba(6, 182, 212, 0.2);
+    color: #67e8f9;
+}
+
+.celda-usuario strong {
+    display: block;
+    color: var(--texto);
+}
+
+.celda-usuario span {
+    font-size: 0.78rem;
+    color: var(--texto-suave);
+}
+
+.accion-chip {
+    font-size: 0.8rem;
+    color: var(--acento-claro);
+}
+
+/* Portal creativo (Apafa, docentes) */
+.portal-hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 22px 0;
+    padding: 22px 24px;
+    border-radius: 14px;
+    border: 1px solid var(--borde);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(34, 197, 94, 0.08));
+}
+
+.portal-hero h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.portal-hero-badge {
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    background: var(--superficie-alta);
+    border: 1px solid var(--borde);
+}
+
+.portal-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.tarjeta-portal {
+    padding: 18px;
+    border-radius: 12px;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+}
+
+.tarjeta-portal h3 {
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+    margin-bottom: 10px;
+}
+
+.portal-numero {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--verde);
+}
+
+.portal-texto-chico {
+    font-size: 0.9rem;
+    color: var(--texto);
+}
+
+.enlace-portal {
+    width: auto;
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+}
+
+.portal-tips,
+.portal-avisos {
+    margin-bottom: 20px;
+    padding: 16px 18px;
+    border-radius: 12px;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+}
+
+.portal-tips h3,
+.portal-avisos h3 {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.portal-tips ul {
+    list-style: none;
+    padding: 0;
+}
+
+.portal-tips li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--borde);
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+}
+
+.portal-tips li:last-child {
+    border-bottom: none;
+}
+
+.aviso-linea {
+    font-size: 0.88rem;
+    margin-bottom: 8px;
+    color: var(--texto);
+}
+
+.aviso-linea.suave {
+    color: var(--texto-suave);
+    font-size: 0.82rem;
+}

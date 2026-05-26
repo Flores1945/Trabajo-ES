@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Alumnos - Liceo Asistencia</title>
+    <link rel="stylesheet" href="../css/tema.css">
+    <link rel="stylesheet" href="../css/alumnos.css">
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body class="pagina-alumnos">
+    <header class="cabecera-alumnos">
+        <div>
+            <p class="brand-bar">I.E. Liceo Trujillo</p>
+            <h1>Registro de Alumnos</h1>
+            <p class="subtitulo-pagina" id="subtituloPagina">Gestion y consulta de estudiantes</p>
+        </div>
+        <div class="cabecera-acciones">
+            <nav id="menuNavegacion" class="menu-top"></nav>
+            <button type="button" class="btn-funcional-inline" id="cerrarSesionBtn">Cerrar sesion</button>
+        </div>
+    </header>
+
+    <div class="layout-alumnos">
+        <aside class="panel-formulario" id="panelFormulario">
+            <h2 id="tituloFormulario">Nuevo alumno</h2>
+            <form id="formAlumno">
+                <input type="hidden" id="alumnoId">
+
+                <div class="campo-form">
+                    <label for="nombresCompletos">Nombres completos</label>
+                    <input type="text" id="nombresCompletos" required>
+                </div>
+
+                <div class="campo-form">
+                    <label for="nivel">Nivel</label>
+                    <select id="nivel" required></select>
+                </div>
+
+                <div class="campo-form">
+                    <label for="grado">Grado</label>
+                    <select id="grado" required disabled>
+                        <option value="">Selecciona nivel primero</option>
+                    </select>
+                </div>
+
+                <div class="campo-form">
+                    <label for="seccion">Seccion</label>
+                    <select id="seccion" required></select>
+                </div>
+
+                <div class="campo-form">
+                    <label for="turno">Turno</label>
+                    <select id="turno" required>
+                        <option value="">Selecciona</option>
+                        <option value="Dia">Dia</option>
+                        <option value="Tarde">Tarde</option>
+                    </select>
+                </div>
+
+                <div class="grupo-form-botones">
+                    <button type="submit" class="btn-funcional-inline" id="guardarAlumnoBtn">Guardar alumno</button>
+                    <button type="button" class="btn-secundario" id="limpiarFormBtn">Limpiar</button>
+                </div>
+            </form>
+        </aside>
+
+        <section class="panel-lista">
+            <div class="filtros-alumnos">
+                <h3>Filtrar lista</h3>
+                <div class="filtros-fila cuatro-columnas">
+                    <div class="campo-inline">
+                        <label for="filtroNivel">Nivel</label>
+                        <select id="filtroNivel">
+                            <option value="">Todos</option>
+                            <option value="Primaria">Primaria</option>
+                            <option value="Secundaria">Secundaria</option>
+                        </select>
+                    </div>
+                    <div class="campo-inline">
+                        <label for="filtroGrado">Grado</label>
+                        <select id="filtroGrado">
+                            <option value="">Todos</option>
+                        </select>
+                    </div>
+                    <div class="campo-inline">
+                        <label for="filtroSeccion">Seccion</label>
+                        <select id="filtroSeccion">
+                            <option value="">Todas</option>
+                        </select>
+                    </div>
+                    <div class="campo-inline">
+                        <label for="filtroTurno">Turno</label>
+                        <select id="filtroTurno">
+                            <option value="">Todos</option>
+                            <option value="Dia">Dia</option>
+                            <option value="Tarde">Tarde</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="acciones-lista" id="accionesLista">
+                    <button type="button" class="btn-funcional-inline" id="exportarListaBtn">Exportar lista Excel</button>
+                    <button type="button" class="btn-secundario" id="cargarDemoAlumnosBtn">Cargar 60 alumnos demo</button>
+                    <button type="button" class="btn-secundario" id="limpiarDemoAlumnosBtn">Limpiar demo alumnos</button>
+                </div>
+            </div>
+
+            <p class="estado-alumnos" id="estadoAlumnos"></p>
+
+            <div class="tabla-alumnos-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombres</th>
+                            <th>Nivel</th>
+                            <th>Grado</th>
+                            <th>Seccion</th>
+                            <th>Turno</th>
+                            <th id="colAcciones">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaAlumnosBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="../js/alumnos.js"></script>
+</body>
+</html>

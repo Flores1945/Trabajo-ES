@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "799929195707",
+    "firebase_url": "https://liceo-asistencia-default-rtdb.firebaseio.com",
+    "project_id": "liceo-asistencia",
+    "storage_bucket": "liceo-asistencia.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799929195707:android:2056d656ba41f10c369d9e",
+        "android_client_info": {
+          "package_name": "com.example.liceo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgAY040fpTU72fF106iV9pYNeVbCYSGWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799929195707:android:90f3c0686bf3b18e369d9e",
+        "android_client_info": {
+          "package_name": "com.example.liceoasistenciavirtual"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgAY040fpTU72fF106iV9pYNeVbCYSGWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

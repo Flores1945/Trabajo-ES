@@ -1,0 +1,168 @@
+body.pagina-auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-card,
+.registro-card {
+    width: min(100%, 400px);
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 18px;
+    padding: 32px 28px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.registro-card {
+    width: min(100%, 480px);
+}
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 26px;
+    position: relative;
+}
+
+.btn-regresar {
+    display: block;
+    margin: 0 auto 14px;
+    padding: 8px 14px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    background: var(--superficie-alta);
+    color: var(--texto-suave);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.btn-regresar:hover {
+    color: var(--texto);
+    border-color: var(--acento-claro);
+}
+
+.encabezado h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--texto);
+    margin-bottom: 6px;
+}
+
+.encabezado p {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+}
+
+.campo {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    color: var(--texto-suave);
+    font-weight: 500;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background: var(--superficie-alta);
+    color: var(--texto);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+    border-color: rgba(59, 130, 246, 0.6);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.acciones {
+    margin-top: 8px;
+}
+
+button[type="submit"],
+.form-submit {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 13px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ecfdf5;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.35), rgba(22, 163, 74, 0.2));
+    border: 1px solid rgba(34, 197, 94, 0.5);
+    box-shadow: var(--verde-sombra);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-1px);
+}
+
+.estado {
+    min-height: 22px;
+    margin-top: 14px;
+    text-align: center;
+    font-size: 0.88rem;
+    color: var(--texto-suave);
+}
+
+.nota {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+}
+
+.nota a {
+    color: var(--acento-claro);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nota a:hover {
+    text-decoration: underline;
+}
+
+.notificacion {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 320px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.2s, transform 0.2s;
+    z-index: 1000;
+}
+
+.notificacion.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.notificacion.ok {
+    background: linear-gradient(135deg, #15803d, #22c55e);
+    box-shadow: var(--verde-sombra);
+}
+
+.notificacion.error {
+    background: linear-gradient(135deg, #b91c1c, #ef4444);
+    box-shadow: var(--rojo-sombra);
+}

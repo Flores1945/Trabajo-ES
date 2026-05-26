@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_screen">24dp</dimen>
+    <dimen name="spacing_lg">20dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_sm">12dp</dimen>
+    <dimen name="spacing_xs">8dp</dimen>
+
+    <dimen name="radius_card">20dp</dimen>
+    <dimen name="radius_button">14dp</dimen>
+    <dimen name="radius_input">12dp</dimen>
+
+    <dimen name="button_height">56dp</dimen>
+    <dimen name="hero_height">300dp</dimen>
+    <dimen name="logo_size">120dp</dimen>
+    <dimen name="avatar_size">132dp</dimen>
+    <dimen name="elevation_card">6dp</dimen>
+    <dimen name="toolbar_icon">48dp</dimen>
+</resources>

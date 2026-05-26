@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Liceo Asistencia</title>
+    <link rel="stylesheet" href="../css/tema.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body class="pagina-auth">
+    <main class="registro-card">
+        <header class="encabezado">
+            <button type="button" class="btn-regresar" id="btnRegresar">← Regresar</button>
+            <p class="brand-bar">I.E. Liceo Trujillo</p>
+            <h1>Registro de Personal</h1>
+            <p>Alta de directivos autorizados</p>
+        </header>
+
+        <form id="registroForm">
+            <div class="campo">
+                <label for="nombresCompletos">Nombres completos</label>
+                <input type="text" id="nombresCompletos" required>
+            </div>
+
+            <div class="campo">
+                <label for="dni">DNI (solo numeros, 8 digitos)</label>
+                <input type="text" id="dni" maxlength="8" pattern="\d{8}" inputmode="numeric" required>
+            </div>
+
+            <div class="campo">
+                <label for="correo">Correo electronico</label>
+                <input type="email" id="correo" required>
+            </div>
+
+            <div class="campo">
+                <label for="celular">Numero de celular</label>
+                <input type="tel" id="celular" pattern="\d{9}" inputmode="numeric" maxlength="9" required>
+            </div>
+
+            <div class="campo">
+                <label for="cargo">Cargo</label>
+                <select id="cargo" required>
+                    <option value="">Selecciona un cargo</option>
+                    <option value="Director">Director</option>
+                    <option value="Subdirector">Subdirector</option>
+                    <option value="Apafa">Apafa</option>
+                    <option value="Docente">Docente</option>
+                    <option value="Sub Docente">Sub Docente</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="clave">Contrasena</label>
+                <input type="password" id="clave" minlength="6" required>
+            </div>
+
+            <button type="submit">Registrar</button>
+        </form>
+
+        <p class="estado" id="estadoRegistro"></p>
+        <p class="nota">Ya tienes cuenta? <a href="./index.html">Volver al login</a></p>
+    </main>
+
+    <div class="notificacion" id="notificacionRegistro" role="alert" aria-live="polite"></div>
+
+    <script type="module" src="../js/registro.js"></script>
+</body>
+</html>

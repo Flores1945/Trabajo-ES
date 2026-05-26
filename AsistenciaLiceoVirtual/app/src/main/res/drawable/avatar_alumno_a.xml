@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <path
+        android:fillColor="#E8F4FC"
+        android:pathData="M0,0h120v120h-120z" />
+    <!-- Birrete -->
+    <path
+        android:fillColor="#0B4C82"
+        android:pathData="M24,38 L60,22 L96,38 L96,46 L60,52 L24,46 Z" />
+    <path
+        android:fillColor="#C9A227"
+        android:pathData="M88,42 L100,48 L100,52 L88,48 Z" />
+    <!-- Cabeza -->
+    <path
+        android:fillColor="#D4A574"
+        android:pathData="M44,48 C44,38 52,32 60,32 C68,32 76,38 76,48 C76,58 68,64 60,64 C52,64 44,58 44,48" />
+    <!-- Polo institucional -->
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M38,62 L82,62 L88,108 L32,108 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M52,62 L68,62 L60,78 Z" />
+</vector>

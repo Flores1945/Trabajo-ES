@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Marca institucional -->
+    <color name="primary">#0B4C82</color>
+    <color name="primary_dark">#07355C</color>
+    <color name="primary_light">#1A6BB5</color>
+    <color name="secondary">#C9A227</color>
+    <color name="secondary_light">#E8D48A</color>
+
+    <!-- Superficies -->
+    <color name="home_background">#EEF3F9</color>
+    <color name="surface_card">#FFFFFF</color>
+    <color name="surface_elevated">#FAFCFE</color>
+
+    <!-- Texto -->
+    <color name="text_primary">#0D2137</color>
+    <color name="text_secondary">#5A6B7D</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    <color name="text_hint">#8A9AAB</color>
+
+    <!-- Acciones -->
+    <color name="success">#2E7D32</color>
+    <color name="success_dark">#1B5E20</color>
+    <color name="warning">#E65100</color>
+    <color name="error">#C62828</color>
+    <color name="gold_accent">#C9A227</color>
+    <color name="red_logout_text">#C62828</color>
+
+    <color name="divider_school">#D8E2EC</color>
+    <color name="input_stroke">#B8C8D8</color>
+    <color name="input_stroke_focused">#0B4C82</color>
+    <color name="ripple_on_primary">#33FFFFFF</color>
+    <color name="ripple_on_surface">#1A0B4C82</color>
+    <color name="overlay_header">#1A000000</color>
+</resources>

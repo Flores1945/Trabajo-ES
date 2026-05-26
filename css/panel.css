@@ -1,0 +1,124 @@
+.layout {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
+    gap: 18px;
+    padding: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.barra,
+.contenido {
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    padding: 22px 18px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.barra h2 {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--texto-suave);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--borde);
+    font-weight: 600;
+}
+
+.barra-subtitulo {
+    margin-top: 20px !important;
+    margin-bottom: 10px !important;
+    padding-top: 14px;
+    border-top: 1px solid var(--borde);
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 28px;
+    min-height: 420px;
+}
+
+.contenido h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: var(--texto);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.detalle {
+    font-size: 0.95rem;
+    color: var(--texto-suave);
+    margin-bottom: 28px;
+    max-width: 420px;
+}
+
+.resumen-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    width: 100%;
+    max-width: 640px;
+}
+
+.tarjeta-resumen {
+    background: var(--superficie-alta);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 18px 14px;
+    text-align: center;
+}
+
+.tarjeta-resumen h3 {
+    font-size: 0.78rem;
+    color: var(--texto-suave);
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.tarjeta-resumen p {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--acento-claro);
+}
+
+.btn-salir {
+    border-color: rgba(239, 68, 68, 0.45) !important;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.22), rgba(185, 28, 28, 0.1)) !important;
+    color: #fecaca !important;
+    box-shadow: var(--rojo-sombra) !important;
+}
+
+.enlace-principal {
+    max-width: 320px;
+    margin-top: 24px;
+    text-align: center;
+}
+
+@media (max-width: 960px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contenido {
+        min-height: auto;
+        order: -1;
+    }
+
+    .resumen-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+}

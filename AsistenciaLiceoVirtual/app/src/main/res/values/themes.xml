@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.AsistenciaLiceoVirtual" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/text_primary</item>
+        <item name="android:colorBackground">@color/home_background</item>
+        <item name="colorSurface">@color/surface_card</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorError">@color/error</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/surface_card</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="materialButtonStyle">@style/Widget.App.Button.Primary</item>
+        <item name="textInputStyle">@style/Widget.App.TextInput</item>
+        <item name="editTextStyle">@style/Widget.App.TextInputEditText</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+    </style>
+
+    <style name="Theme.AsistenciaLiceoVirtual" parent="Base.Theme.AsistenciaLiceoVirtual" />
+
+    <style name="ShapeAppearanceOverlay.AvatarCircle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - Liceo Asistencia</title>
+    <link rel="stylesheet" href="../css/tema.css">
+    <link rel="stylesheet" href="../css/panel.css">
+    <link rel="stylesheet" href="../css/reportes.css">
+</head>
+<body>
+    <div class="layout layout-reportes">
+        <aside class="barra barra-izquierda">
+            <p class="brand-bar">I.E. Liceo Trujillo</p>
+            <h2>Navegacion</h2>
+            <div id="menuNavegacion"></div>
+
+            <h2 class="barra-subtitulo">Institucional</h2>
+            <button type="button" class="btn-decorativo">Calendario escolar</button>
+            <button type="button" class="btn-decorativo">Comunicados</button>
+        </aside>
+
+        <main class="contenido contenido-reportes">
+            <!-- Vista directivos: registro de movimientos -->
+            <section id="vistaAuditoria" class="vista-auditoria oculto">
+                <p class="brand-bar">Control institucional</p>
+                <h1>Registro de movimientos</h1>
+                <p class="detalle" id="subtituloAuditoria">Historial de acciones en el portal web.</p>
+
+                <div class="auditoria-cabecera">
+                    <div class="leyenda-cargos" id="leyendaCargos" aria-label="Leyenda de cargos"></div>
+                    <div class="filtros-auditoria">
+                        <label>
+                            Filtrar por cargo
+                            <select id="filtroCargoAuditoria">
+                                <option value="">Todos (permitidos)</option>
+                            </select>
+                        </label>
+                        <label>
+                            Buscar usuario
+                            <input type="search" id="buscarUsuarioAuditoria" placeholder="Nombre...">
+                        </label>
+                        <button type="button" class="btn-funcional-inline" id="recargarAuditoriaBtn">Actualizar</button>
+                    </div>
+                </div>
+
+                <p class="estado-auditoria" id="estadoAuditoria"></p>
+
+                <div class="tabla-auditoria-wrap">
+                    <table class="tabla-auditoria">
+                        <thead>
+                            <tr>
+                                <th>Fecha y hora</th>
+                                <th>Usuario</th>
+                                <th>Cargo</th>
+                                <th>Accion</th>
+                                <th>Detalle</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaMovimientosBody"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Vista Apafa / Docentes: centro sin auditoria -->
+            <section id="vistaPortal" class="vista-portal oculto">
+                <p class="brand-bar">Tu espacio en el liceo</p>
+                <h1 id="portalSaludo">Bienvenido(a)</h1>
+                <p class="detalle" id="portalDetalle"></p>
+
+                <div class="portal-hero">
+                    <div class="portal-hero-texto">
+                        <h2 id="portalTituloRol">Centro de trabajo</h2>
+                        <p id="portalMensajeRol"></p>
+                    </div>
+                    <div class="portal-hero-badge" id="portalBadgeCargo">Cargo</div>
+                </div>
+
+                <div class="portal-stats" id="portalStats">
+                    <article class="tarjeta-portal">
+                        <h3>Alumnos registrados</h3>
+                        <p class="portal-numero" id="statAlumnos">-</p>
+                    </article>
+                    <article class="tarjeta-portal">
+                        <h3>Tu turno de trabajo</h3>
+                        <p class="portal-texto-chico" id="statTurnoInfo">Consulta por grado y seccion</p>
+                    </article>
+                    <article class="tarjeta-portal">
+                        <h3>Acceso rapido</h3>
+                        <a class="btn-funcional enlace-portal" href="./alumnos.html" id="enlaceAlumnosPortal">Ir a lista de alumnos</a>
+                    </article>
+                </div>
+
+                <div class="portal-tips">
+                    <h3>Recordatorios del dia</h3>
+                    <ul id="portalTipsLista"></ul>
+                </div>
+
+                <div class="portal-avisos">
+                    <h3>Avisos institucionales</h3>
+                    <p class="aviso-linea">Mantén actualizada la informacion de los alumnos de tu aula o comision.</p>
+                    <p class="aviso-linea">Los reportes de asistencia detallados son gestionados por la direccion.</p>
+                    <p class="aviso-linea suave">Este panel es tu inicio: aqui no se muestran movimientos de otros usuarios.</p>
+                </div>
+            </section>
+        </main>
+
+        <aside class="barra barra-derecha">
+            <h2>Accesos</h2>
+            <div id="accesosReportes"></div>
+            <button class="btn-funcional btn-salir" id="cerrarSesionBtn" type="button">Cerrar sesion</button>
+
+            <h2 class="barra-subtitulo">Proximamente</h2>
+            <button type="button" class="btn-decorativo">Comunicados PDF</button>
+            <button type="button" class="btn-decorativo">Encuestas APAFA</button>
+        </aside>
+    </div>
+
+    <script type="module" src="../js/reportes.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+.pagina-alumnos {
+    padding: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.cabecera-alumnos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 20px 22px;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+}
+
+.cabecera-alumnos h1 {
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.subtitulo-pagina {
+    font-size: 0.88rem;
+    color: var(--texto-suave);
+    margin-top: 4px;
+}
+
+.cabecera-acciones {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.menu-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.menu-top .btn-funcional {
+    width: auto;
+    margin: 0;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+}
+
+.layout-alumnos {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 18px;
+    align-items: start;
+}
+
+.panel-formulario {
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 20px;
+    position: sticky;
+    top: 16px;
+}
+
+.panel-formulario.oculto {
+    display: none;
+}
+
+.panel-formulario h2 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: var(--texto);
+}
+
+.campo-form {
+    margin-bottom: 14px;
+}
+
+.campo-form label {
+    display: block;
+    font-size: 0.84rem;
+    margin-bottom: 6px;
+    color: var(--texto-suave);
+}
+
+.campo-form input,
+.campo-form select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    background: var(--fondo-suave);
+    color: var(--texto);
+    font-family: inherit;
+}
+
+.grupo-form-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.btn-secundario {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--borde);
+    background: transparent;
+    color: var(--texto-suave);
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.panel-lista {
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.filtros-alumnos h3 {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--acento-claro);
+    margin-bottom: 12px;
+}
+
+.filtros-fila {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.filtros-fila.tres-columnas {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.filtros-fila.cuatro-columnas {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.campo-inline label {
+    display: block;
+    font-size: 0.82rem;
+    margin-bottom: 6px;
+    color: var(--texto);
+}
+
+.campo-inline select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    background: var(--fondo-suave);
+    color: var(--texto);
+    font-family: inherit;
+}
+
+.acciones-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.acciones-lista .btn-funcional-inline,
+.acciones-lista .btn-secundario {
+    width: auto;
+    margin: 0;
+}
+
+.estado-alumnos {
+    font-size: 0.88rem;
+    color: var(--texto-suave);
+    margin-bottom: 12px;
+}
+
+.tabla-alumnos-wrap {
+    overflow: auto;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+}
+
+.tabla-alumnos-wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+}
+
+.tabla-alumnos-wrap th,
+.tabla-alumnos-wrap td {
+    padding: 11px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--borde);
+    font-size: 0.88rem;
+}
+
+.tabla-alumnos-wrap th {
+    background: var(--superficie-alta);
+    color: var(--texto-suave);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.celda-acciones {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.btn-tabla {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 0.78rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn-tabla.editar {
+    background: rgba(34, 197, 94, 0.2);
+    color: #86efac;
+    box-shadow: var(--verde-sombra);
+}
+
+.btn-tabla.eliminar {
+    background: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+    box-shadow: var(--rojo-sombra);
+}
+
+.btn-funcional-inline {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    background: rgba(34, 197, 94, 0.12);
+    color: #ecfdf5;
+    font-weight: 600;
+    font-size: 0.84rem;
+    box-shadow: var(--verde-sombra);
+    cursor: pointer;
+    font-family: inherit;
+}
+
+@media (max-width: 900px) {
+    .layout-alumnos {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-formulario {
+        position: static;
+    }
+
+    .filtros-fila.tres-columnas,
+.filtros-fila.cuatro-columnas {
+        grid-template-columns: 1fr;
+    }
+}

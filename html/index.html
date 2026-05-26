@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Liceo Asistencia</title>
+    <link rel="stylesheet" href="../css/tema.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body class="pagina-auth">
+    <main class="login-card">
+        <header class="encabezado">
+            <p class="brand-bar">I.E. Liceo Trujillo</p>
+            <h1>Ingreso al Sistema</h1>
+            <p>Control de asistencia institucional</p>
+        </header>
+
+        <form id="loginForm">
+            <div class="campo">
+                <label for="correo">Correo</label>
+                <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo" required>
+            </div>
+
+            <div class="campo">
+                <label for="clave">Contrasena</label>
+                <input type="password" id="clave" name="clave" placeholder="Ingresa tu contrasena" required>
+            </div>
+
+            <div class="acciones">
+                <button type="submit">Iniciar sesion</button>
+            </div>
+        </form>
+
+        <p class="estado" id="estadoLogin"></p>
+        <p class="nota">Si no tienes cuenta, registrate <a href="./registro.html">aqui</a>.</p>
+    </main>
+
+    <script type="module" src="../js/login.js"></script>
+</body>
+</html>

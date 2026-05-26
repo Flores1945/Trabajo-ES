@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Directivo - Liceo Asistencia</title>
+    <link rel="stylesheet" href="../css/tema.css">
+    <link rel="stylesheet" href="../css/panel.css">
+</head>
+<body>
+    <div class="layout">
+        <aside class="barra barra-izquierda">
+            <p class="brand-bar">I.E. Liceo Trujillo</p>
+            <h2>Navegacion</h2>
+            <div id="menuNavegacion"></div>
+
+            <h2 class="barra-subtitulo">Institucional</h2>
+            <button type="button" class="btn-decorativo">Calendario escolar</button>
+            <button type="button" class="btn-decorativo">Comunicados</button>
+            <button type="button" class="btn-decorativo">Horarios</button>
+        </aside>
+
+        <main class="contenido">
+            <p class="brand-bar">Portal directivo</p>
+            <h1 id="bienvenidaTexto">Bienvenido(a)</h1>
+            <p class="detalle" id="detalleUsuario"></p>
+
+            <section class="resumen-grid">
+                <article class="tarjeta-resumen">
+                    <h3>Total asistencias</h3>
+                    <p id="totalAsistenciasResumen">0</p>
+                </article>
+                <article class="tarjeta-resumen">
+                    <h3>Aulas activas</h3>
+                    <p id="aulasResumen">0</p>
+                </article>
+                <article class="tarjeta-resumen">
+                    <h3>Cargo en sesion</h3>
+                    <p id="cargoResumen">-</p>
+                </article>
+            </section>
+        </main>
+
+        <aside class="barra barra-derecha" id="barraAccesos">
+            <h2>Accesos</h2>
+            <div id="accesosRapidos"></div>
+            <button class="btn-funcional btn-salir" id="cerrarSesionBtn" type="button">Cerrar sesion</button>
+
+            <h2 class="barra-subtitulo">Proximamente</h2>
+            <button type="button" class="btn-decorativo">Biblioteca</button>
+            <button type="button" class="btn-decorativo">Eventos</button>
+            <button type="button" class="btn-decorativo">Matriculas</button>
+        </aside>
+    </div>
+
+    <script type="module" src="../js/panel.js"></script>
+</body>
+</html>

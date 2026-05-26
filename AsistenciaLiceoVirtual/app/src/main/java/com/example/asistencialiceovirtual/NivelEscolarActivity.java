@@ -24,6 +24,7 @@ import java.util.List;
 public class NivelEscolarActivity extends AppCompatActivity {
 
     public static final String EXTRA_TURNO = "extra_turno";
+    public static final String EXTRA_DOCENTE_NOMBRE = "extra_docente_nombre";
     public static final String TURNO_MANANA = "manana";
     public static final String TURNO_TARDE = "tarde";
 
@@ -31,6 +32,7 @@ public class NivelEscolarActivity extends AppCompatActivity {
     private static final String PANEL_SECUNDARIA = "secundaria";
 
     private String turno;
+    private String docenteNombre;
     private String panelExpandido = null;
 
     private LinearLayout panelPrimaria;
@@ -52,6 +54,7 @@ public class NivelEscolarActivity extends AppCompatActivity {
         });
 
         turno = getIntent().getStringExtra(EXTRA_TURNO);
+        docenteNombre = getIntent().getStringExtra(EXTRA_DOCENTE_NOMBRE);
         if (turno == null) {
             finish();
             return;
@@ -142,6 +145,7 @@ public class NivelEscolarActivity extends AppCompatActivity {
         intent.putExtra(ListaAlumnosActivity.EXTRA_NIVEL, nivelFirebase);
         intent.putExtra(ListaAlumnosActivity.EXTRA_GRADO, grado);
         intent.putExtra(ListaAlumnosActivity.EXTRA_SECCION, seccion);
+        intent.putExtra(ListaAlumnosActivity.EXTRA_DOCENTE_NOMBRE, docenteNombre);
         startActivity(intent);
     }
 

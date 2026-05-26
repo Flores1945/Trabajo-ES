@@ -73,6 +73,20 @@
     <string name="alumnos_error_reglas">Sin permiso para leer estudiantes. Publique las reglas de Firebase.</string>
     <string name="alumnos_error_db">No se pudo cargar alumnos: %1$s</string>
 
+    <!-- Asistencia -->
+    <string name="btn_puntual">Puntual</string>
+    <string name="btn_tardanza">Tardanza</string>
+    <string name="btn_falta">Falta</string>
+    <string name="btn_justificacion">Justif.</string>
+    <string name="asistencia_registrada">Asistencia registrada: %1$s — %2$s</string>
+    <string name="asistencia_error_reglas">Sin permiso para registrar asistencia. Publique las reglas del nodo asistencias.</string>
+    <string name="asistencia_error_guardar">No se pudo registrar asistencia: %1$s</string>
+    <string name="asistencia_estado_puntual">Puntual</string>
+    <string name="asistencia_estado_tardanza">Tardanza</string>
+    <string name="asistencia_estado_falta">Falta</string>
+    <string name="asistencia_estado_justificacion">Justificacion</string>
+    <string name="asistencia_titulo">Asistencia — %1$s</string>
+
     <string-array name="grados_primaria">
         <item>1°</item>
         <item>2°</item>

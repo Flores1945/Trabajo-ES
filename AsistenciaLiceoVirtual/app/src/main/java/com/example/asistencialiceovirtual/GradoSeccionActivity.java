@@ -39,6 +39,7 @@ public class GradoSeccionActivity extends AppCompatActivity {
 
         String turno = getIntent().getStringExtra(NivelEscolarActivity.EXTRA_TURNO);
         String nivel = getIntent().getStringExtra(EXTRA_NIVEL);
+        String docenteNombre = getIntent().getStringExtra(NivelEscolarActivity.EXTRA_DOCENTE_NOMBRE);
         if (turno == null || nivel == null) {
             finish();
             return;
@@ -68,6 +69,7 @@ public class GradoSeccionActivity extends AppCompatActivity {
             intent.putExtra(ListaAlumnosActivity.EXTRA_NIVEL, nivelFirebase);
             intent.putExtra(ListaAlumnosActivity.EXTRA_GRADO, grado);
             intent.putExtra(ListaAlumnosActivity.EXTRA_SECCION, seccion);
+            intent.putExtra(ListaAlumnosActivity.EXTRA_DOCENTE_NOMBRE, docenteNombre);
             startActivity(intent);
         });
     }

@@ -64,8 +64,10 @@ function inicializarFormularioEscolar() {
 }
 
 function configurarModoPorRol() {
+    const layoutAlumnos = document.querySelector(".layout-alumnos");
     if (soloLectura) {
         panelFormulario.classList.add("oculto");
+        if (layoutAlumnos) layoutAlumnos.classList.add("sin-formulario");
         subtituloPagina.textContent =
             "Consulta de alumnos por nivel, grado, seccion y turno (solo lectura).";
         if (accionesLista) accionesLista.style.display = "none";
